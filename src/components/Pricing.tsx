@@ -5,7 +5,7 @@ import { Check, Star, Sparkles, Zap } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    price: "990",
+    price: "150",
     description: "Parfait pour les petites entreprises qui démarrent",
     icon: Sparkles,
     features: [
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: "Professionnel",
-    price: "2 490",
+    price: "250",
     description: "La solution complète pour les entreprises en croissance",
     icon: Star,
     features: [
