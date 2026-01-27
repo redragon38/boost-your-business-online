@@ -6,15 +6,12 @@ const plans = [
   {
     name: "Starter",
     price: "150",
-    description: "Parfait pour les petites entreprises qui démarrent",
+    description: "Parfait pour une présence en ligne essentielle",
     icon: Sparkles,
     features: [
-      "Site vitrine 5 pages",
+      "Site vitrine 1 page",
       "Design responsive",
       "Formulaire de contact",
-      "Optimisation SEO de base",
-      "Hébergement 1 an inclus",
-      "Support email"
     ],
     popular: false,
     gradient: "from-slate-500 to-slate-400"
@@ -22,17 +19,14 @@ const plans = [
   {
     name: "Professionnel",
     price: "250",
-    description: "La solution complète pour les entreprises en croissance",
+    description: "La solution idéale pour présenter votre activité",
     icon: Star,
     features: [
-      "Site jusqu'à 15 pages",
+      "Site jusqu'à 4 pages max",
       "Design premium sur-mesure",
-      "Intégration CMS",
-      "SEO avancé + Analytics",
-      "Hébergement premium 1 an",
-      "Support prioritaire 7j/7",
-      "Maintenance mensuelle",
-      "Blog intégré"
+      "Maintenance offerte 1er mois",
+      "Optimisation SEO de base",
+      "Support email"
     ],
     popular: true,
     gradient: "from-primary to-blue-400"
@@ -55,6 +49,13 @@ const plans = [
     popular: false,
     gradient: "from-purple-500 to-pink-400"
   }
+];
+
+const addons = [
+  { name: "Maintenance mensuelle", price: "50" },
+  { name: "Ajout d'une page", price: "100" },
+  { name: "Optimisation SEO avancée", price: "150" },
+  { name: "Hébergement annuel", price: "120" },
 ];
 
 const Pricing = () => {
@@ -98,7 +99,7 @@ const Pricing = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-8 items-start mb-20">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -184,6 +185,24 @@ const Pricing = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Addons Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto glass p-8 rounded-2xl"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">Options & Suppléments</h3>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {addons.map((addon, index) => (
+              <div key={addon.name} className="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
+                <span className="text-muted-foreground font-medium">{addon.name}</span>
+                <span className="text-primary font-bold">{addon.price}€</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
