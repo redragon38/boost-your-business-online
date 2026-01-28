@@ -1,10 +1,43 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Play } from "lucide-react";
+import { ArrowRight, Sparkles, Play, X } from "lucide-react";
+import { useState } from "react";
 
 const Hero = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+      <AnimatePresence>
+        {showVideo && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 md:p-10"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl"
+            >
+              <button
+                onClick={() => setShowVideo(false)}
+                className="absolute top-4 right-4 z-[110] p-2 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+              <video
+                src="/assets/videos/realisation.mp4"
+                className="w-full h-full object-contain"
+                autoPlay
+                controls
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {/* Background grid effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,0.02)_1px,transparent_1px)] bg-[size:80px_80px]" />
       
@@ -146,6 +179,7 @@ const Hero = () => {
             variant="outline" 
             size="lg"
             className="group border-border hover:bg-secondary text-lg px-8 py-6 glass"
+            onClick={() => setShowVideo(true)}
           >
             <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
             Voir nos réalisations
