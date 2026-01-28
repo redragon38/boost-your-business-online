@@ -51,7 +51,7 @@ const Footer = () => {
           >
             <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
             <ul className="space-y-2">
-              {["Accueil", "Services", "Forfaits", "Témoignages", "Contact"].map((item) => (
+              {["Accueil", "Services", "Forfaits", "Contact"].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                     {item}

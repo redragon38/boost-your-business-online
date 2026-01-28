@@ -55,7 +55,6 @@ const addons = [
   { name: "Maintenance mensuelle", price: "50" },
   { name: "Ajout d'une page", price: "100" },
   { name: "Optimisation SEO avancée", price: "150" },
-  { name: "Hébergement annuel", price: "120" },
 ];
 
 const Pricing = () => {

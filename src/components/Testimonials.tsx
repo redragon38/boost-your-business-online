@@ -1,28 +1,10 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { UserCheck, Star, Award } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Marie Dupont",
-    role: "Directrice, Boutique Élégance",
-    content: "Notre chiffre d'affaires a augmenté de 40% depuis le lancement du nouveau site. L'équipe a parfaitement compris nos besoins.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    name: "Thomas Bernard",
-    role: "CEO, Tech Solutions",
-    content: "Un travail remarquable ! Le site est non seulement magnifique mais aussi ultra-performant. Nos clients nous félicitent régulièrement.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
-  },
-  {
-    name: "Sophie Martin",
-    role: "Fondatrice, Studio Créatif",
-    content: "Professionnalisme et créativité au rendez-vous. Le site reflète parfaitement l'image de notre marque. Je recommande à 100%.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
-  }
+const stats = [
+  { label: "Projets livrés", value: "150+", icon: Award },
+  { label: "Clients satisfaits", value: "98%", icon: UserCheck },
+  { label: "Expérience", value: "3x", icon: Star },
 ];
 
 const Testimonials = () => {
@@ -46,68 +28,51 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
           >
-            Témoignages
+            Le créateur
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Ils nous font <span className="text-gradient-accent">confiance</span>
+            Message du <span className="text-gradient-accent">créateur</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Découvrez ce que nos clients disent de leur expérience
-          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.name}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ y: -8 }}
-              className="group"
-            >
-              <div className="relative p-8 rounded-2xl glass hover:border-primary/30 transition-all duration-500 h-full">
-                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6 group-hover:text-primary/40 transition-colors" />
-                
-                {/* Stars with animation */}
-                <div className="flex gap-1 mb-6">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + i * 0.1, type: "spring", stiffness: 300 }}
-                    >
-                      <Star className="w-5 h-5 fill-primary text-primary" />
-                    </motion.div>
-                  ))}
-                </div>
-
-                <p className="text-foreground leading-relaxed mb-6 text-lg">
-                  "{testimonial.content}"
-                </p>
-
-                <div className="flex items-center gap-4">
-                  <motion.img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover ring-2 ring-primary/20"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  />
-                  <div>
-                    <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                </div>
-
-                {/* Bottom gradient line */}
-                <div className="absolute bottom-0 left-8 right-8 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative p-8 rounded-2xl glass border-primary/20"
+          >
+            <p className="text-xl text-foreground leading-relaxed italic mb-8">
+              "Mon objectif est de fournir des solutions web de haute qualité, accessibles et performantes. Chaque projet est une opportunité de créer quelque chose d'unique qui propulse votre activité vers l'avant. Je m'engage personnellement sur la qualité et le suivi de chaque réalisation."
+            </p>
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-2xl">
+                WS
               </div>
-            </motion.div>
-          ))}
+              <div>
+                <div className="font-bold text-xl text-foreground">WebStudio</div>
+                <div className="text-primary font-medium">Expert Digital</div>
+              </div>
+            </div>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-3 gap-6">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="glass p-6 rounded-2xl text-center hover:border-primary/30 transition-all group"
+              >
+                <stat.icon className="w-8 h-8 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
+                <div className="text-3xl font-bold text-foreground mb-1">{stat.value}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -157,12 +157,11 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-3 gap-4 md:gap-8 mt-20 max-w-3xl mx-auto"
+          className="grid grid-cols-2 gap-4 md:gap-8 mt-20 max-w-2xl mx-auto"
         >
           {[
             { value: "150+", label: "Projets livrés" },
             { value: "98%", label: "Clients satisfaits" },
-            { value: "3x", label: "ROI moyen" },
           ].map((stat, index) => (
             <motion.div 
               key={stat.label} 

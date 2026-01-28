@@ -25,7 +25,7 @@ const Navbar = () => {
           </motion.a>
           
           <div className="hidden md:flex items-center gap-8">
-            {["Services", "Forfaits", "Témoignages"].map((item, index) => (
+            {["Services", "Forfaits"].map((item, index) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -72,7 +72,7 @@ const Navbar = () => {
           className="md:hidden overflow-hidden"
         >
           <div className="glass rounded-2xl mt-2 p-4 flex flex-col gap-4">
-            {["Services", "Forfaits", "Témoignages"].map((item) => (
+            {["Services", "Forfaits"].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
