@@ -29,17 +29,7 @@ const Footer = () => {
               Nous créons des sites web qui transforment vos visiteurs en clients fidèles.
             </p>
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+              {/* Social links removed */}
             </div>
           </motion.div>
 

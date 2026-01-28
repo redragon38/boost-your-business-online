@@ -152,30 +152,7 @@ const Hero = () => {
           </Button>
         </motion.div>
 
-        {/* Stats with glass effect */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="grid grid-cols-2 gap-4 md:gap-8 mt-20 max-w-2xl mx-auto"
-        >
-          {[
-            { value: "150+", label: "Projets livrés" },
-            { value: "98%", label: "Clients satisfaits" },
-          ].map((stat, index) => (
-            <motion.div 
-              key={stat.label} 
-              className="glass rounded-2xl p-6 text-center hover:border-primary/30 transition-all duration-300 group"
-              whileHover={{ y: -5, scale: 1.02 }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9 + index * 0.1 }}
-            >
-              <div className="text-3xl md:text-4xl font-bold text-foreground group-hover:text-gradient-accent transition-colors">{stat.value}</div>
-              <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Stats with glass effect removed */}
       </div>
 
       {/* Scroll indicator */}

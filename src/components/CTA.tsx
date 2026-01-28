@@ -83,14 +83,6 @@ const CTA = () => {
                 transition={{ duration: 0.5 }}
               />
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-border hover:bg-secondary text-lg px-8 py-6 glass group"
-            >
-              <Phone className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
-              Réserver un appel
-            </Button>
           </motion.div>
 
           <motion.div 
@@ -101,24 +93,14 @@ const CTA = () => {
             transition={{ delay: 0.5 }}
           >
             <motion.a 
-              href="mailto:contact@webstudio.fr" 
+              href="mailto:l.bonin38@gmail.com" 
               className="group flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               <div className="w-10 h-10 rounded-full glass flex items-center justify-center group-hover:border-primary/50 transition-colors">
                 <Mail className="w-5 h-5 text-primary" />
               </div>
-              contact@webstudio.fr
-            </motion.a>
-            <motion.a 
-              href="tel:+33123456789" 
-              className="group flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="w-10 h-10 rounded-full glass flex items-center justify-center group-hover:border-primary/50 transition-colors">
-                <Phone className="w-5 h-5 text-primary" />
-              </div>
-              01 23 45 67 89
+              l.bonin38@gmail.com
             </motion.a>
           </motion.div>
         </motion.div>
