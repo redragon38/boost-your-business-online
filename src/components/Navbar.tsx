@@ -53,9 +53,12 @@ const Navbar = () => {
               variant="default" 
               size="sm" 
               className="bg-gradient-primary hover:opacity-90 transition-opacity relative overflow-hidden group"
+              asChild
             >
-              <span className="relative z-10">Contactez-nous</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
+              <a href="mailto:l.bonin38@gmail.com?subject=Démarrer%20mon%20projet%20-%20WebStudio&body=Bonjour%2C%0A%0AJe%20souhaite%20démarrer%20un%20projet%20de%20création%20de%20site%20web.%0A%0AMerci%20de%20me%20recontacter.%0A%0ACordialement">
+                <span className="relative z-10">Contactez-nous</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500" />
+              </a>
             </Button>
           </motion.div>
 
@@ -88,8 +91,10 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-gradient-primary w-full">
-              Contactez-nous
+            <Button className="bg-gradient-primary w-full" asChild>
+              <a href="mailto:l.bonin38@gmail.com?subject=Démarrer%20mon%20projet%20-%20WebStudio&body=Bonjour%2C%0A%0AJe%20souhaite%20démarrer%20un%20projet%20de%20création%20de%20site%20web.%0A%0AMerci%20de%20me%20recontacter.%0A%0ACordialement">
+                Contactez-nous
+              </a>
             </Button>
           </div>
         </motion.div>
