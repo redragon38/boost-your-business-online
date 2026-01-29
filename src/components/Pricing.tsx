@@ -53,8 +53,8 @@ const plans = [
 
 const addons = [
   { name: "Maintenance mensuelle", price: "50" },
-  { name: "Ajout d'une page", price: "100" },
   { name: "Optimisation SEO avancée", price: "150" },
+  { name: "Ajout d'une page", price: "100" },
 ];
 
 const Pricing = () => {
@@ -193,12 +193,20 @@ const Pricing = () => {
           className="max-w-3xl mx-auto glass p-8 rounded-2xl"
         >
           <h3 className="text-2xl font-bold text-center mb-8">Options & Suppléments</h3>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             {addons.map((addon, index) => (
-              <div key={addon.name} className="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                <span className="text-muted-foreground font-medium">{addon.name}</span>
-                <span className="text-primary font-bold">{addon.price}€</span>
-              </div>
+              <motion.div 
+                key={addon.name} 
+                className="flex flex-col items-center justify-center p-6 rounded-xl bg-white/5 border border-white/10 hover:border-primary/30 transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+              >
+                <span className="text-2xl font-bold text-primary mb-2">{addon.price}€</span>
+                <span className="text-muted-foreground font-medium text-center">{addon.name}</span>
+              </motion.div>
             ))}
           </div>
         </motion.div>
