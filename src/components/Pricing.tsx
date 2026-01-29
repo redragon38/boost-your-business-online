@@ -40,11 +40,7 @@ const plans = [
       "Nombre de pages illimité",
       "Design exclusif",
       "Fonctionnalités avancées",
-      "E-commerce / Réservation",
-      "Intégrations API",
-      "Support dédié 24/7",
-      "Maintenance complète",
-      "Formation équipe"
+      "Maintenance complète"
     ],
     popular: false,
     gradient: "from-purple-500 to-pink-400"
