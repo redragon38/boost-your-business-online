@@ -25,16 +25,19 @@ const Navbar = () => {
           </motion.a>
           
           <div className="hidden md:flex items-center gap-8">
-            {["Services", "Forfaits"].map((item, index) => (
+            {[
+              { label: "Services", href: "#services" },
+              { label: "Forfaits", href: "#pricing" }
+            ].map((item, index) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="relative text-muted-foreground hover:text-foreground transition-colors group"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
               >
-                {item}
+                {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
@@ -72,14 +75,17 @@ const Navbar = () => {
           className="md:hidden overflow-hidden"
         >
           <div className="glass rounded-2xl mt-2 p-4 flex flex-col gap-4">
-            {["Services", "Forfaits"].map((item) => (
+            {[
+              { label: "Services", href: "#services" },
+              { label: "Forfaits", href: "#pricing" }
+            ].map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="text-muted-foreground hover:text-foreground transition-colors py-2"
                 onClick={() => setIsOpen(false)}
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <Button className="bg-gradient-primary w-full">
