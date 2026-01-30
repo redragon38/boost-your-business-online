@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Linkedin, Instagram, Code2 } from "lucide-react";
+import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
+import logoVideo from "@/assets/logo.mp4";
 
 const Footer = () => {
   const socialLinks = [
@@ -22,11 +23,15 @@ const Footer = () => {
             viewport={{ once: true }}
             className="md:col-span-2"
           >
-            <div className="flex items-center gap-2 text-2xl font-bold text-foreground mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center">
-                <Code2 className="w-5 h-5 text-white" />
-              </div>
-              <span>Dev<span className="text-primary">io</span></span>
+            <div className="mb-4">
+              <video 
+                src={logoVideo} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">
               Nous créons des sites web qui transforment vos visiteurs en clients fidèles.
