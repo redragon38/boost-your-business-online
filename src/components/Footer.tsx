@@ -27,7 +27,6 @@ const Footer = () => {
               <video 
                 src={logoVideo} 
                 autoPlay 
-                loop 
                 muted 
                 playsInline
                 className="h-10 w-auto"
