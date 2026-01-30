@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Twitter, Linkedin, Instagram } from "lucide-react";
-import logoVideo from "@/assets/logo.mp4";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   const socialLinks = [
@@ -24,11 +24,9 @@ const Footer = () => {
             className="md:col-span-2"
           >
             <div className="mb-4">
-              <video 
-                src={logoVideo} 
-                autoPlay 
-                muted 
-                playsInline
+              <img 
+                src={logoImage} 
+                alt="Devio Logo"
                 className="h-10 w-auto"
               />
             </div>
