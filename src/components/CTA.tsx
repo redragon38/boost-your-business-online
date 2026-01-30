@@ -73,7 +73,7 @@ const CTA = () => {
               className="group bg-gradient-primary hover:opacity-90 transition-all shadow-glow text-lg px-8 py-6 relative overflow-hidden"
               asChild
             >
-              <a href="mailto:l.bonin38@gmail.com?subject=Demande%20de%20devis%20-%20WebStudio&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20la%20cr%C3%A9ation%20de%20mon%20site%20web.%0A%0AMerci%20de%20me%20recontacter.%0A%0ACordialement">
+              <a href="mailto:l.bonin38@gmail.com?subject=Demande%20de%20devis%20-%20Devio&body=Bonjour%2C%0A%0AJe%20souhaite%20obtenir%20un%20devis%20pour%20la%20cr%C3%A9ation%20de%20mon%20site%20web.%0A%0AMerci%20de%20me%20recontacter.%0A%0ACordialement">
                 <span className="relative z-10 flex items-center">
                   Demander un devis gratuit
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
