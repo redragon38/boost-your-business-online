@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -17,11 +17,14 @@ const Navbar = () => {
         <div className="glass rounded-2xl px-6 py-3 flex items-center justify-between">
           <motion.a 
             href="#" 
-            className="text-2xl font-bold text-foreground"
+            className="flex items-center gap-2 text-2xl font-bold text-foreground"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Dev<span className="text-primary">io</span>
+            <div className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center">
+              <Code2 className="w-5 h-5 text-white" />
+            </div>
+            <span>Dev<span className="text-primary">io</span></span>
           </motion.a>
           
           <div className="hidden md:flex items-center gap-8">
