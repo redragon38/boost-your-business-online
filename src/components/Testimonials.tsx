@@ -51,7 +51,7 @@ const Testimonials = () => {
                 WS
               </div>
               <div>
-                <div className="font-bold text-2xl text-foreground">WebStudio</div>
+                <div className="font-bold text-2xl text-foreground">Devio</div>
                 <div className="text-primary font-medium text-lg">Expert Digital</div>
               </div>
             </div>
