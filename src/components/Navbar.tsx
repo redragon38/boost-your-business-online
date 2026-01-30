@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoVideo from "@/assets/logo.mp4";
+import logoImage from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +22,9 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <video 
-              src={logoVideo} 
-              autoPlay 
-              muted 
-              playsInline
+            <img 
+              src={logoImage} 
+              alt="Devio Logo"
               className="h-10 w-auto"
             />
           </motion.a>
