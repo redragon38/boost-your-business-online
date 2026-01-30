@@ -21,7 +21,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Web<span className="text-primary">Studio</span>
+            Dev<span className="text-primary">io</span>
           </motion.a>
           
           <div className="hidden md:flex items-center gap-8">

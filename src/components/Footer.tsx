@@ -23,7 +23,7 @@ const Footer = () => {
             className="md:col-span-2"
           >
             <div className="text-2xl font-bold text-foreground mb-4">
-              Web<span className="text-primary">Studio</span>
+              Dev<span className="text-primary">io</span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-6">
               Nous créons des sites web qui transforment vos visiteurs en clients fidèles.
@@ -78,7 +78,7 @@ const Footer = () => {
           className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <div className="text-sm text-muted-foreground">
-            © 2026 WebStudio. Tous droits réservés.
+            © 2026 Devio. Tous droits réservés.
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Français</a>
